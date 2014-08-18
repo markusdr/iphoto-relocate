@@ -1,7 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Copyright 2014 Markus Dreyer
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 # Markus Dreyer, markus.dreyer@gmail.com
+
+"""Relocate iPhoto Masters files to free up space."""
 
 from __future__ import print_function
 import optparse
@@ -15,7 +31,8 @@ import shutil
 
 LOG = logging.getLogger(__name__)
 
-# from http://blogs.blumetech.com/blumetechs-tech-blog/2011/05/faster-python-file-copy.html
+# This function is from:
+# http://blogs.blumetech.com/blumetechs-tech-blog/2011/05/faster-python-file-copy.html
 def copy_file(src, dst, buffer_size=10485760):
     '''
     Copies a file to a new location. Much faster performance than Apache Commons due to use of larger buffer
