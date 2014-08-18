@@ -27,7 +27,7 @@ Usage example:
 
 This creates a `Masters` directory on the external drive (the
 `/Volumes/external-drive/iphoto` directory), which contains all
-'master' image and video files from my iPhoto library.
+'master' image and video files from the iPhoto library.
 
 The `Masters` directory in the iPhoto library `~/Pictures/iPhoto
 Library` is changed to contain symbolic links only.
@@ -55,13 +55,13 @@ the external drive.
 ## Deleting photos in iPhotos
 
 After you run the script, all masters will be on the external drive;
-iPhoto will only see symbolic links. Consequently, when you delete a
-photo in iPhoto, it will only delete the link, but not the original
-photo on the external drive.
+iPhoto will only see symbolic links in its local iPhoto
+library. Consequently, when you delete a photo in iPhoto, it will only
+delete the link, but not the original photo on the external drive.
 
 The following procedure is recommended: Whenever you get a new batch
-of photos from your camera, they will be local in your iPhoto library,
-as normal. Go through them and delete some photos. Then run the script
+of photos from your camera, they will be in your lical iPhoto library,
+as usual. Go through them and delete some photos. Then run the script
 to move all remaining photos to the external drive.
 
 ## Installation

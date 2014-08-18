@@ -101,7 +101,7 @@ def main(argv):
                       dest="nocopy",
                       action="store_true",
                       default=False,
-                      help="Use this option if all files are already in the target directory (e.g., after copying iPhoto library over by hand, using rsync, etc.)")
+                      help="Use this option if all files are already in the target directory (e.g., after copying iPhoto library Masters directory over by hand, using rsync, etc.)")
 
     parser.add_option("--dry-run",
                       dest="dry_run",
