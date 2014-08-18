@@ -60,7 +60,7 @@ library. Consequently, when you delete a photo in iPhoto, it will only
 delete the link, but not the original photo on the external drive.
 
 The following procedure is recommended: Whenever you get a new batch
-of photos from your camera, they will be in your lical iPhoto library,
+of photos from your camera, they will be in your local iPhoto library
 as usual. Go through them and delete some photos. Then run the script
 to move all remaining photos to the external drive.
 
