@@ -52,7 +52,7 @@ photos over to the external drive. It will recognize which files are
 already symbolic links and which files are new and need to be moved to
 the external drive.
 
-## Deleting photos in iPhotos
+## Deleting photos in iPhoto
 
 After you run the script, all masters will be on the external drive;
 iPhoto will only see symbolic links in its local iPhoto
