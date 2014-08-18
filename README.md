@@ -14,8 +14,14 @@ location on the external drive.
 So the script simulates a missing "relocate masters" or "relocate
 originals" functionality for iPhoto.
 
+After running the script, iPhoto will work just as before. When you
+click on a photo, iPhoto will follow the symbolic link and display the
+photo. You can still quickly flip through your large collection of
+photos, unless you have a very slow connection to your external drive
+(all USB drives and most NAS drives should be fine).
+
 Note that the alternative, simpler method of just copying the whole
-iPhoto library to your NAS drive is not recommended and may result in
+iPhoto library to a NAS drive is not recommended and may result in
 data loss. See a discussion
 [here](https://discussions.apple.com/thread/54372780).
 
@@ -23,14 +29,13 @@ data loss. See a discussion
 
 Usage example:
 
-    ./iphoto-relocate.py "~/Pictures/iPhoto Library" "/Volumes/external-drive/iphoto"
+    ./iphoto-relocate.py "/Users/markus/Pictures/iPhoto Library" "/Volumes/external-drive"
 
 This creates a `Masters` directory on the external drive (the
-`/Volumes/external-drive/iphoto` directory), which contains all
-'master' image and video files from the iPhoto library.
-
-The `Masters` directory in the iPhoto library `~/Pictures/iPhoto
-Library` is changed to contain symbolic links only.
+`/Volumes/external-drive` directory), which contains all 'master'
+image and video files from the iPhoto library. The `Masters` directory
+in the iPhoto library `/Users/markus/Pictures/iPhoto Library` is
+changed to contain symbolic links only.
 
 As a precaution, you should make a backup of your iPhoto library
 before running the script.
@@ -39,13 +44,15 @@ See also:
 
     ./iphoto-relocate.py --help
 
-If your library is large it will take many hours for the script to
-move all files over. It is recommended to connect your drive directly
-to the computer the first time you run the script (as opposed to a
-slower wireless connection).
+When you run the script for the first time, it will move all originals
+over to the external drive, which can take many hours.  It is
+recommended to connect your external drive directly to the computer
+(e.g., via Thunderbolt or USB) the first time you run the script (as
+opposed to a slower wireless connection).
 
 On subsequent calls, the script will only copy new files over, so it
-will run much faster than the first time.
+will run much faster than the first time and does not need a direct
+connection to the external drive.
 
 You can, for example, run the script every month to move your latest
 photos over to the external drive. It will recognize which files are
